@@ -90,13 +90,16 @@ Understanding machine learning models often requires digging into mathematical d
 
 ---
 
-## **Contributing**
+## **Contributing**  
 
-We welcome contributions to improve this library. To contribute:  
-	1.	Fork the repository.  
-	2.	Create a new branch.  
-	3.	Make your changes and add tests.  
-	4.	Submit a pull request.  
+This project is under **continuous development**, and all contributions are welcome! Our goal is to improve the **Log Loss Tool** so that it becomes even more useful for the community. If you have ideas, improvements, or found an issue, we would love to have your contribution!  
+
+To contribute, please follow the steps below:  
+
+1. **Fork** this repository. This will create a copy of the project where you can make your changes.  
+2. **Create a new branch** for your contribution:    
+   ```bash
+   git checkout -b my-new-feature  
 
 ---
 
