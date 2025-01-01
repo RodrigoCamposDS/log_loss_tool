@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="log_loss_tool",
-    version="0.3.1",  # Atualize a versão aqui
+    version="0.2.0",  # Atualize a versão aqui
     description="A Python library to visualize the Log-Loss function.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
