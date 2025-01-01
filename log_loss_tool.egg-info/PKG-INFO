@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: log_loss_tool
 Version: 0.3.0
-Summary: A Python library to visualize and calculate Log-Loss, including optimal threshold calculation.
+Summary: A Python library to visualize the Log-Loss function.
 Home-page: https://github.com/RodrigoCamposDS/log_loss_tool
 Author: Rodrigo Campos
 Author-email: rodrigocamposag90@gmail.com
