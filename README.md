@@ -92,11 +92,11 @@ Understanding machine learning models often requires digging into mathematical d
 
 ## **Contributing**
 
-We welcome contributions to improve this library. To contribute:
-	1.	Fork the repository.
-	2.	Create a new branch.
-	3.	Make your changes and add tests.
-	4.	Submit a pull request.
+We welcome contributions to improve this library. To contribute:  
+	1.	Fork the repository.  
+	2.	Create a new branch.  
+	3.	Make your changes and add tests.  
+	4.	Submit a pull request.  
 
 ---
 
