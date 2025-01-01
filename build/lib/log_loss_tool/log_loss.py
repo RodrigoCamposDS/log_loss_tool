@@ -1,3 +1,4 @@
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -20,6 +21,14 @@ def plot_log_loss_with_custom_input(
     The function calculates the missing values (probability, log-loss, or gradient) 
     automatically if at least one is provided. It also highlights the predicted class 
     based on the optimal threshold.
+
+    Author: Rodrigo Campos
+    Email: rodrigocamposag90@gmail.com
+    GitHub:https://github.com/RodrigoCamposDS
+    LinkedIn: https://www.linkedin.com/in/rodrigo-barcelos-campos/
+    Date: 2025-01-01
+    Description: This file contains the implementation of the plot_log_loss_with_custom_input function,
+             which visualizes the Log-Loss function for binary logistic regression.
 
     Parameters
     ----------

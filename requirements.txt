@@ -13,3 +13,4 @@ matplotlib>=3.4.0    # Visualization library
 # - If using a virtual environment, activate it before running pip install:
 #     source <env_name>/bin/activate   # On Linux/Mac
 #     <env_name>\Scripts\activate     # On Windows
+
