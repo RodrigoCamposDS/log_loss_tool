@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -6,7 +5,7 @@ def plot_log_loss_with_custom_input(
     probability=None,
     log_loss=None,
     gradient=None,
-    optimal_threshold=0.5,
+    threshold=None,  # Renomeado de optimal_threshold para threshold
     title="Logarithmic Loss Function (Log-Loss)",
     figsize=(15, 10),
     font_size=12,
@@ -20,7 +19,7 @@ def plot_log_loss_with_custom_input(
 
     The function calculates the missing values (probability, log-loss, or gradient) 
     automatically if at least one is provided. It also highlights the predicted class 
-    based on the optimal threshold.
+    based on the threshold.
 
     Author: Rodrigo Campos
     Email: rodrigocamposag90@gmail.com
@@ -38,8 +37,8 @@ def plot_log_loss_with_custom_input(
         Log-loss value for y=1. If provided, it will be used to calculate the probability.
     gradient : float, optional
         Gradient for y=1. If provided, it will be used to calculate the probability.
-    optimal_threshold : float, default=0.5
-        The threshold used to classify the predicted value into class 0 or 1.
+    threshold : float, optional, default=None
+        The threshold used to classify the predicted value into class 0 or 1. If not provided, the function will calculate it automatically.
     title : str, default="Logarithmic Loss Function (Log-Loss)"
         Title of the plot.
     figsize : tuple, default=(15, 10)
@@ -65,9 +64,14 @@ def plot_log_loss_with_custom_input(
 
     Examples
     --------
-    >>> plot_log_loss_with_custom_input(probability=0.7, optimal_threshold=0.5)
-    >>> plot_log_loss_with_custom_input(log_loss=0.5, optimal_threshold=0.5)
-    >>> plot_log_loss_with_custom_input(gradient=-3.0, optimal_threshold=0.5)
+    >>> plot_log_loss_with_custom_input(probability=0.7, threshold=0.5)
+    >>> plot_log_loss_with_custom_input(log_loss=0.5, threshold=0.5)
+    >>> plot_log_loss_with_custom_input(gradient=-3.0, threshold=0.5)
+
+    In the above examples, the **threshold** parameter determines how the predicted class is classified. 
+    - **log_loss** could be a log-loss value calculated based on model predictions, 
+    - **gradient** is the gradient of the log-loss, 
+    - and **threshold** is the value for classification (default is 0.5).
     """
     # Validation of inputs
     if probability is not None:
@@ -95,8 +99,13 @@ def plot_log_loss_with_custom_input(
     log_loss_y0 = -np.log(1 - h_x_real)
     best_gradient_y0 = 1 / (1 - h_x_real)
 
-    # Determine the class based on the optimal threshold
-    predicted_class = 1 if h_x_real >= optimal_threshold else 0
+    # Automatically calculate threshold if not provided
+    if threshold is None:
+        threshold = 0.5  # Default value
+        print(f"Threshold was not provided. Using default value: {threshold}")
+
+    # Determine the class based on the threshold
+    predicted_class = 1 if h_x_real >= threshold else 0
 
     # Coordinates for tangent lines
     h_x = np.linspace(0.01, 0.99, 500)
@@ -104,13 +113,16 @@ def plot_log_loss_with_custom_input(
     tangent_y_y1 = best_gradient_y1 * (tangent_x - h_x_real) + log_loss_y1
     tangent_y_y0 = best_gradient_y0 * (tangent_x - h_x_real) + log_loss_y0
 
+    # Adjust label for threshold
+    threshold_label = f"Threshold = {threshold:.3f}"
+
     # Plot the graph
     plt.figure(figsize=figsize)
     plt.plot(h_x, -np.log(h_x), label="-log(h(x)) (y=1)", color=color_y1)
     plt.plot(h_x, -np.log(1 - h_x), label="-log(1-h(x)) (y=0)", color=color_y0)
     plt.axhline(0, color="gray", linestyle="--", linewidth=0.8)
     plt.axvline(h_x_real, color="blue", linestyle="--", linewidth=0.8, label=f"h(x) = {h_x_real:.4f}")
-    plt.axvline(optimal_threshold, color="purple", linestyle="--", linewidth=0.8, label=f"Optimal Threshold = {optimal_threshold:.3f}")
+    plt.axvline(threshold, color="purple", linestyle="--", linewidth=0.8, label=threshold_label)
 
     # Tangents and scatter points
     plt.scatter([h_x_real], [log_loss_y1], color="green", zorder=5, label=f"Log-Loss (y=1) = {log_loss_y1:.4f}", s=scatter_size)
@@ -119,7 +131,7 @@ def plot_log_loss_with_custom_input(
     plt.plot(tangent_x, tangent_y_y0, color="blue", linestyle="--", label=f"Tangent (y=0, Gradient = {best_gradient_y0:.4f})")
 
     # Predicted class annotation
-    plt.text(0.5, 4.5, f"Predicted class: {predicted_class} (Optimal Threshold = {optimal_threshold:.3f})", 
+    plt.text(0.5, 4.5, f"Predicted class: {predicted_class} (Threshold = {threshold:.3f})", 
              fontsize=font_size, color="purple", bbox=dict(facecolor='white', alpha=0.8))
 
     # Final adjustments
