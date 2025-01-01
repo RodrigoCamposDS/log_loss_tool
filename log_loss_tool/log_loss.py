@@ -5,7 +5,7 @@ def plot_log_loss_with_custom_input(
     probability=None,
     log_loss=None,
     gradient=None,
-    threshold=None,  # Renomeado de optimal_threshold para threshold
+    threshold=None,
     title="Logarithmic Loss Function (Log-Loss)",
     figsize=(15, 10),
     font_size=12,
