@@ -5,15 +5,14 @@ A Python library designed to visualize and simplify the understanding of the Log
 Purpose
 
 This library was created to assist beginners and professionals in:
-	•	Abstracting complex calculations behind the Log-Loss function.
-	•	Visualizing gradients and probabilities to better understand their influence on the loss function.
-	•	Building intuition about binary logistic regression through clear, customizable plots.
+- Abstracting complex calculations behind the Log-Loss function.
+- Visualizing gradients and probabilities to better understand their influence on the loss function.
+- Building intuition about binary logistic regression through clear, customizable plots.
 
 Features
-	•	Visualization of the Log-Loss function for both classes (y=1 and y=0).
-	•	Gradient Behavior Analysis: Explore how gradients change with probability.
-	•	Customizable Plots: Configure colors, labels, gridlines, and more.
-	•	Educational Support: Perfect for students, educators, and professionals who want to strengthen their understanding of logistic regression.
+- Visualization of the Log-Loss function for both classes (y=1 and y=0).
+- Gradient Behavior Analysis: Explore how gradients change with probability.- Customizable Plots: Configure colors, labels, gridlines, and more.
+- Educational Support: Perfect for students, educators, and professionals who want to strengthen their understanding of logistic regression.
 
 Installation
 
