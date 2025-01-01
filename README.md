@@ -101,6 +101,19 @@ To contribute, please follow the steps below:
    ```bash
    git checkout -b my-new-feature  
 
+3.	Make your changes and don’t forget to add tests to ensure the new code is working correctly. If you made improvements or fixes, explain what you changed in the commit.   
+
+4.	Submit a pull request with a clear description of your changes. Please explain the feature you added or the issue you fixed so we can review your contribution effectively.  
+
+Examples of contribution:  
+- Improvements: New features or changes that make the library more efficient or useful.
+- Bug fixes: If you find any bugs or unexpected behavior, please open an issue or submit a pull request with the fix.
+- Documentation: If you see areas where the documentation can be clearer or more helpful, improvements to documentation are also highly appreciated.
+
+This project is open source and continuously evolving. By contributing, you help make the Log Loss Tool more robust and applicable to different needs.
+
+We greatly appreciate any contribution, big or small!
+
 ---
 
 ## **License**
