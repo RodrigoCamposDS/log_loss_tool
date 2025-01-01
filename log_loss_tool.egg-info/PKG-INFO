@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: log_loss_tool
-Version: 0.2.0
+Version: 0.3.0
 Summary: A Python library to visualize and calculate Log-Loss, including optimal threshold calculation.
 Home-page: https://github.com/RodrigoCamposDS/log_loss_tool
 Author: Rodrigo Campos
@@ -106,13 +106,29 @@ Understanding machine learning models often requires digging into mathematical d
 
 ---
 
-## **Contributing**
+## **Contributing**  
 
-We welcome contributions to improve this library. To contribute:
-	1.	Fork the repository.
-	2.	Create a new branch.
-	3.	Make your changes and add tests.
-	4.	Submit a pull request.
+This project is under **continuous development**, and all contributions are welcome! Our goal is to improve the **Log Loss Tool** so that it becomes even more useful for the community. If you have ideas, improvements, or found an issue, we would love to have your contribution!  
+
+To contribute, please follow the steps below:  
+
+1. **Fork** this repository. This will create a copy of the project where you can make your changes.  
+2. **Create a new branch** for your contribution:    
+   ```bash
+   git checkout -b my-new-feature  
+
+3.	Make your changes and don’t forget to add tests to ensure the new code is working correctly. If you made improvements or fixes, explain what you changed in the commit.   
+
+4.	Submit a pull request with a clear description of your changes. Please explain the feature you added or the issue you fixed so we can review your contribution effectively.  
+
+Examples of contribution:  
+- Improvements: New features or changes that make the library more efficient or useful.
+- Bug fixes: If you find any bugs or unexpected behavior, please open an issue or submit a pull request with the fix.
+- Documentation: If you see areas where the documentation can be clearer or more helpful, improvements to documentation are also highly appreciated.
+
+This project is open source and continuously evolving. By contributing, you help make the Log Loss Tool more robust and applicable to different needs.
+
+We greatly appreciate any contribution, big or small!
 
 ---
 
