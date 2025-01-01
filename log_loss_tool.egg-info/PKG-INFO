@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: log_loss_tool
+Name: Log_Loss_Tool
 Version: 0.1.0
 Summary: A Python library to visualize the Log-Loss function.
 Home-page: https://github.com/RodrigoCamposDS/log_loss_tool

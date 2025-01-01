@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name= "Log_Loss_Tool",
+    name= "log_loss_tool",
     version= "0.1.0", 
     description="A Python library to visualize the Log-Loss function.",
     long_description=open("README.md").read(),
