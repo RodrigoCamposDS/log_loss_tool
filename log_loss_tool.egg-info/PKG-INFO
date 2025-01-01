@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: log_loss_tool
+Version: 0.1.0
+Summary: A Python tool to visualize the Log-Loss function.
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Python: >=3.6
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: matplotlib>=3.4.0
