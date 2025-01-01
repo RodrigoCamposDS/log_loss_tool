@@ -1,20 +1,20 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="log_loss_tool",  # Nome único do pacote no PyPI
-    version="0.3.0",       # Atualize para refletir a nova versão
-    description="A Python library to visualize and calculate Log-Loss, including optimal threshold calculation.",
-    long_description=open("README.md").read(),  # Leia a descrição do README
-    long_description_content_type="text/markdown",  # O README está em Markdown
+    name="log_loss_tool",
+    version="0.3.0",  # Atualize a versão aqui
+    description="A Python library to visualize the Log-Loss function.",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     author="Rodrigo Campos",
     author_email="rodrigocamposag90@gmail.com",
-    url="https://github.com/RodrigoCamposDS/log_loss_tool",  # URL do repositório
-    packages=find_packages(),  # Automaticamente encontra subpacotes
+    url="https://github.com/RodrigoCamposDS/log_loss_tool",
+    packages=find_packages(),
     install_requires=[
         "numpy>=1.21.0",
         "matplotlib>=3.4.0"
     ],
-    python_requires=">=3.6",  # Versão mínima do Python
+    python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
