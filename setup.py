@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="log_loss_tool",  # Nome único do pacote no PyPI
-    version="0.3.0",       # Atualize para refletir a nova versão
+    version="0.2.0",       # Atualize para refletir a nova versão
     description="A Python library to visualize and calculate Log-Loss, including optimal threshold calculation.",
     long_description=open("README.md").read(),  # Leia a descrição do README
     long_description_content_type="text/markdown",  # O README está em Markdown
